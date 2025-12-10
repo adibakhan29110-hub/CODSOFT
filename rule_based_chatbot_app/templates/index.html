@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Chatbot – Dark Mode</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <h2>Nova — Your Chatbot 🤖</h2>
+
+    <!-- Dark Mode Toggle -->
+    <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+    </label>
+</div>
+
+<div class="chat-container">
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input id="user-input" type="text" placeholder="Type your message..." autocomplete="off">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

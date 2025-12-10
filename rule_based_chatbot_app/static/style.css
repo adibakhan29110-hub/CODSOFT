@@ -1,0 +1,154 @@
+/* Default Dark Mode Theme */
+:root {
+    --bg-color: #0e061a;
+    --container-color: rgba(255, 255, 255, 0.06);
+    --chat-bg: rgba(255, 255, 255, 0.08);
+    --user-msg: #7028ff;
+    --bot-msg: #31008d;
+    --text-color: white;
+}
+
+/* Light Mode Theme */
+.light-mode {
+    --bg-color: #f0f0f0;
+    --container-color: white;
+    --chat-bg: #e6e6e6;
+    --user-msg: #5f8cff;
+    --bot-msg: #d4b3ff;
+    --text-color: black;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+/* Top bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--container-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Chat Container */
+.chat-container {
+    width: 45%;
+    margin: 40px auto;
+    background: var(--container-color);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+/* Chat Box */
+#chat-box {
+    height: 420px;
+    overflow-y: auto;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--chat-bg);
+    transition: 0.3s;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.user {
+    background: var(--user-msg);
+    text-align: right;
+    color: white;
+}
+
+.bot {
+    background: var(--bot-msg);
+    text-align: left;
+    color: white;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: var(--chat-bg);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background: #9f4fff;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b56aff;
+}
+
+/* Toggle Switch Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background: #ccc;
+    border-radius: 30px;
+    inset: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background: #9f4fff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
